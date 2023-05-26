@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viaja em Angola</title>
+    <link rel="stylesheet" href="../../fontawesome-free-6.1.2-web/css/all.css">
+    <link rel="stylesheet" href="../_css/logo.css">
+    <link rel="stylesheet" href="../_css/rodape.css">
+    <link rel="stylesheet" href="../_css/principal.css">
+    <link rel="stylesheet" href="../_css/botao.css">
+    <link rel="stylesheet" href="../_css/modals.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-bus"></i>
+                <p>Angola</p>
+            </div>
+           <div class="menu-nav">
+                <button>X</button>
+                <ul class="ul">
+                    <li><a class="link link2" id="link2" href="#section" onclick="trocar(0,0)">Home</a></li>
+                    <li><a class="link" href="#section" onclick="trocar(1,0)">lugares Turísticos</a></li>
+                    <li><a class="link" href="#section" onclick="trocar(2,0)">Hospedagem</a></li>
+                    <li><a class="link" href="#section" onclick="trocar(3,0)">Companinhas</a></li>
+                </ul>
+                <div class="user">
+                    <span class="sair">X</span>
+                    <ul>
+                        <p></p>
+                        <li class="ir-perfil" ><a href="#">Perfil</a></li>
+                        <li class="comprasbtn">Minhas Compras</li>
+                        <li class="notificacaobtn">Notificações <span></span></li>
+                        <li class="ajudabtn">Ajuda</li>
+                        <li class="sair-pagina">Sair</li>
+                    </ul>
+                </div>
+                <div class="imagem-div">
+                    <img src="" alt="" id="img">
+                    <label for="">Clica Aqui</label>
+                </div>
+           </div>
+           <i class="fas fa-bars"></i>
+        </nav>
+    </header>
+    <section id="section">
+        <div class="principal section">
+            <div class="destaques">
+                <div class="lugares-destaque">
+                    <div class="conteudo">
+                        <h2>Lugares Em Destaque</h2>
+                        <p>Serra da Leba</p>
+                    </div>
+                    <div class="lugar-1 lugares"></div>
+                    <div class="lugar-2 lugares"></div>
+                    <div class="lugar-3 lugares"></div>
+                    <div class="lugar-4 lugares"></div>
+                    <div class="lugar-5 lugares"></div>
+                    <div class="sombra"></div>    
+                </div>
+                <a href="#" class="label-comprar">Comprar Bilhete <i class="fas fa-coins"></i></a>
+            </div>
+            <!--Comprar obilhete para a viajem -->
+            <div class="comprar-bilhete" id="comprar">
+                <div class="content">
+                    <div class="tela-etapas">
+                        <div class="etapas et1">
+                            <label for="" class="texto">Tipo De viajem</label>
+                            <div class="ida-volta">
+                                <div class="item-ida">
+                                    <input type="radio"  onchange="calculaPrecoTotal()" name="ida" id="ida" placeholder="Só ida" checked>
+                                    <div class="circle-radio"></div>
+                                    <label for="ida">Só ida</label>
+                                </div>
+                                <div class="item-ida">
+                                    <input type="radio"  onchange="calculaPrecoTotal()"  name="ida" id="volta" placeholder="Só ida">
+                                    <div class="circle-radio"></div>
+                                    <label for="volta">Ida e Volta</label>
+                                </div>
+                                <div class="item-ida">
+                                    <input type="radio"  onchange="calculaPrecoTotal()"  name="ida" id="multipla" placeholder="Só ida">
+                                    <div class="circle-radio"></div>
+                                    <label for="multipla">Multiplo-Destino</label>
+                                </div>
+                            </div>
+                            <label for="" class="texto">Preencha os teus dados </label>
+                            <div class="data-input">
+                                <input type="text" name="" id="" placeholder="Nome da Empresa de Transporte" onchange="verificarEmpresa()">
+                                <input type="text" name="" id="" placeholder="Origem">
+                                <input type="text" name="" id="" placeholder="Destino">
+                                <input type="number" onchange="calculaPrecoTotal()" name="" id="quantidade" placeholder="Quantidade de Passageiros">
+                                <input type="number" onchange="calculaPrecoTotal()" name="" id="preco" placeholder="Preço unitário">
+                                <button onclick="trocarComprar(1)" class="botao btn-prox">Próxima Etapa</button>
+                            </div>
+                        </div>
+                        <div class="etapas">
+                            <label for="" class="texto">Preencha os teus dados </label>
+                            <input type="text" name="" id="" placeholder="Nome completo">
+                            <article>
+                                <label for="data-ida">Data de Ida:</label>
+                                <input type="datetime-local" name="" id="data-ida" placeholder="Data de ida">
+                            </article>
+                            <article>
+                                <label for="data-volta">Data de Volta:</label>
+                                <input type="datetime-local" name="" id="data-volta" placeholder="Data de volta">
+                            </article>
+                            <label for="" class="preco-total">Preço Total :  5.000,00 Kz</label>
+                             
+                            <label for="" class="paga-aqui">Faça aqui o Pagamento  <i class="fas fa-coins"></i></label>
+                            <article class="btn">
+                                <button onclick="trocarComprar(0)" class="botao">Voltar</button>            
+                                <button class="botao" onclick="requisitarBilhete()">Concluir</button>
+                             </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lugares-turistico section">
+            <div class="content">
+                <div class="lugares">
+                    <div class="menu">
+                        <h3>Tipos de Lugares</h3>
+                        <ul> </ul>
+                        <div class="pesquisa">
+                            <span>Luanda</span>
+                            <input type="text" placeholder="Pesquisa a Província">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+                    <div class="lugares-principal">
+                        <div class="lugares-imagem"></div>
+    
+                        <ul class="outras-imagens"></ul>
+                    </div>
+                </div>
+                <div class="descricao-lugares">
+                    <p class="p3" onmouseenter="trocarFocus(1,0)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, debitis numquam ea corporis eum, quas fuga est eligendi necessitatibus officia omnis deserunt minima? Saepe assumenda molestias natus totam dolorum qui.</p>
+                    <p class="p2" onmouseenter="trocarFocus(1,1)">Luanda</p>
+                    <p class="p1" onmouseenter="trocarFocus(1,2)">Luanda</p>
+                </div>
+            </div>
+        </div>
+        <div class="hospedagem section">
+            <div class="content">
+                <div class="hotel">
+                    <h3>Tipos de Hoteis</h3>
+                    <ul> </ul>
+                    <div class="pesquisa">
+                        <span>Luanda</span>
+                        <input type="text" placeholder="Pesquisa a Província">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div class="hotel-principal">
+                    <div class="hotel-imagem"></div>
+
+                    <ul class="outras-imagens"></ul>
+                </div>
+            </div>
+            <div class="descricao-hospedagem">
+                <p class="p1" onmouseenter="trocarFocus(2,0)">Luanda</p>
+                <p class="p2" onmouseenter="trocarFocus(2,1)">Luanda</p>
+                <p class="p3" onmouseenter="trocarFocus(2,2)">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem id ipsam dignissimos dolore, sunt accusantium. Officiis quasi, tempore, natus voluptatibus aspernatur iusto eaque, iste quod fugit vitae atque nam animi.</p>
+            </div>
+        </div>
+
+        <div class="companinhas section">
+            <div class="container">
+                <div class="tipos">
+                    <h3>Tipos de Companinhas</h3>
+                    <ul> </ul>
+                </div>
+                <div class="horario">
+                    <div class="texto"></div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Dia</td>
+                                <td>Hora</td>
+                                <td>Destino</td>
+                                <td>Comprar</td>
+                            </tr>
+                        </thead>
+                        <tbody><!--Horario Automatico--> </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="container-1">
+                <ul >
+                    <!--Lista os precarios da viajem  -->
+                </ul>
+            </div>
+        </div>
+
+        <div class="notificacao section">
+            <div class="content">
+                <!--Lista das notificações --> 
+            </div>
+
+            <div class="modal-detalhe"></div>
+        </div>
+        <div class="ajuda section">
+            <div class="content">
+                <div class="container">
+                    <label for="assunto">Assunto</label>
+                    <input type="text" id="assunto">
+                    <label for="texto">Digite a tua preocupação </label>
+                    <textarea name="" id="texto" cols="30" rows="10"></textarea>
+                    <button class="botao" onclick="helperForAdm()">Enviar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="compras-cad section">
+            <div class="content">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Tipo De Viaje</td>
+                            <td>Valor da Viaje</td>
+                            <td>Data da Compra</td>
+                            <td> Ver com Detalhes</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--Corpo das compras-->
+                    </tbody>
+                </table>
+
+                <div class="detalhe">
+                    <span class="sair" onclick="desapearModalTiket()">X</span>
+                    <ul> <!-- Lista dos detalhes de umbilhete--></ul>
+                </div>
+            </div>
+        </div>
+        <button class="botao-movel">Comprar Bilhete</button>
+
+    </section>
+    <footer>
+        <div class="parte-1">
+            <ul>
+                <li><a href=""> Contacta-nos</a></li>
+                <li><a href="">Definições</a> </li>
+                <li><a href="">Siga-nos</a> </li>
+            </ul>
+            <ul>
+                <li> <a href="">WhatsApp <i class="fab fa-whatsapp"></i></a></li>
+                <li> <a href="">facebook <i class="fab fa-facebook"></i></a></li>
+                <li> <a href="">GitHub <i class="fab fa-github"></i></a></li>
+            </ul>
+        </div>
+
+       <div class="parte-2">
+           <p>Feito pelo Sebatião Afonso Domingos , Formador Osvaldo, Academinha DLINE - CODE</p>
+       </div> 
+
+    </footer>
+    <!-- Area dos modal-->
+    <div class="content-modal"></div>
+</body>
+<script src="../js/principal.js"></script>
+</html>

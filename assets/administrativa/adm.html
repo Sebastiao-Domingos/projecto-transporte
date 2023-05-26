@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área Administrativa do Viaja em Angola</title>
+    <link rel="stylesheet" href="../fontawesome-free-6.1.2-web/css/all.css">
+    <link rel="stylesheet" href="../_css/logo.css">
+    <link rel="stylesheet" href="../_css/botao.css">
+    <link rel="stylesheet" href="../_css/modals.css">
+    <link rel="stylesheet" href="../_css/adm.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-bus"></i>
+                <p>Angola</p>
+            </div>
+            <div class="user">
+                <input type="search" name="" id="" placeholder="Pesquisa por nome" oninput="pesquisaElemento()">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-bars"></i>
+                <a class="notificacao"><i class="fas fa-bell" onclick="renderNotificacoes()"></i> <span></span></a>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="menu">
+            <h3>Área Administrativa</h3>
+            <ul class="menu-lateral">
+                <li class="li-p">Cadastrar
+                    <ul class="sub-menu sub-1">
+                        <li><i class="fas fa-bus"></i> Companiha</li>
+                        <li><i class="fas fa-building"></i> Hotel</li>
+                        <li><i class="fas fa-tree"></i> Lugar Turístico</li>
+                    </ul>
+                </li>
+                <li class="li-p">Ver
+                    <ul class="sub-menu sub-2">
+                        <li><i class="fas fa-bus"></i> Companinhas</li>
+                        <li><i class="fas fa-users"></i> Usuários</li>
+                        <li><i class="fas fa-building"></i> Hoteis</li>
+                        <li><i class="fas fa-tree"></i> Lugares Turístico</li>
+                    </ul>
+                </li>
+                <li class="li-p">Estatística</li>
+            </ul>
+        </div>
+
+        <main>
+            <!-- Área de cadastro dados --> 
+            <article class="art cadastro">
+                <span class="comp-nome">Empresa</span>
+
+                <div class="cad companinhas-cad">
+                    <form action="#">
+                        <input class="input" type="text" id="nome" placeholder="Nome da Companinha" >
+                        <input class="input" type="text" name=""  placeholder="Localição da Sede">
+                        <div class="selecionar">
+                            <label>Seleciona as Províncias</label>
+                            <ul> <!--Lista das províncias de Angola--></ul>
+                        </div>
+                        <button  class="cadastrar botao" onclick="adicionar('companinhas-cad')">Cadastrar</button>
+                    </form>
+                </div>
+                <div class="cad hoteis-cad">
+                    <form action="#">
+                        <input class="input" type="text" name=""  placeholder="Nome do Hotel">
+                        <input class="input" type="text" name=""  placeholder="Nome da Província">
+                        <input class="input" type="text" name=""  placeholder="Nome do Município">
+                        <input class="input" type="number" name=""  placeholder="Números de quartos disponíveis">
+                        <button  class="cadastrar botao" onclick="adicionar('hoteis-cad')">Cadastrar</button>
+                    </form>
+
+                </div>
+
+                <div class="cad lugares-cad">
+                    <form action="#">
+                        <input class="input" type="text" name=""  placeholder="Nome do Lugar">
+                        <input class="input" type="text" name=""  placeholder="Nome da Província">
+                        <input class="input" type="text" name=""  placeholder="Nome do Município">
+                        <button  class="cadastrar botao" onclick="adicionar('lugares-cad')">Cadastrar</button>
+                    </form>
+                </div>
+            </article>
+            <!-- Área da visualização dados --> 
+            <article class="art visualizar">
+                <span class="comp-nome">Empresa</span>
+                <div class="div companinhas">
+                    <ul> <!--Lista da Companinhas cadastradas--></ul>
+                </div>
+                <div class="div usuarios" >
+                    <ul><!--Lista dos usuarios cadastrados--> </ul>
+                </div>
+                <div class="div hoteis">
+                    <ul><!--Lista dos hoteis cadastradas--></ul>
+                </div>
+                <div class="div lugares">
+                    <ul><!-- Lugares turisticos5--></ul>
+                </div>
+                <article class="detalhes">
+                    <ul> <!-- Elementos da descricao --></ul>
+                </article>
+            </article>
+            <!-- Área da estatistica dados --> 
+            <article class="art estatistica">
+                <div class="est usuario">
+                    <ul>
+                        <li>Número de usuários : </li>
+                        <li>Número de Províncias : </li>
+                        <li>Descrição</li>
+                    </ul>
+                </div>
+                <div class="est companinhas">
+                    <ul>
+                        <li>Número Companinhas : </li>
+                        <li>Número Províncias : </li>
+                    </ul> 
+                </div>
+                <div class="est hoteis">
+                    <ul>
+                        <li>Número de Hoteis : </li>
+                        <li>Número de Províncias:</li>
+                    </ul>
+                </div>
+                <div class="est lugares">
+                    <ul>
+                        <li>Número de Lugres : </li>
+                        <li>Número de Províncias : </li>
+                    </ul>
+                </div>
+            </article>
+            <!-- area das notificações --> 
+            <article class="art notificacao">
+                <!-- Lista das notificações --> 
+            </article>
+            <!-- Área de Editar dados --> 
+            <article class="art editar">
+                <span class="comp-nome">Empresa</span>
+                <div class="cad companinhas-cad">
+                    <form action="#">
+                        <input type="text" id="nome1" placeholder="Nome da Companinha" >
+                        <input type="text" name=""  placeholder="Localição da Sede">
+                        <div class="selecionar">
+                            <label>Seleciona as Províncias</label>
+                            <ul> <!--Lista das províncias de Angola--></ul>
+                        </div>
+                        <button  class="salvar botao" onclick="saveData('companinhas-cad')">Salvar</button>
+                    </form>
+                </div>
+                <div class="cad hoteis-cad">
+                    <form action="#">
+                        <input type="text" name=""  placeholder="Nome do Hotel">
+                        <input type="text" name=""  placeholder="Nome da Província">
+                        <input type="text" name=""  placeholder="Nome do Município">
+                        <input type="number" name=""  placeholder="Números de quartos disponíveis">
+                        <button  class="salvar botao" onclick="saveData('hoteis-cad')">Salvar</button>
+                    </form>
+
+                </div>
+                <div class="cad usuario-cad">
+                    <label for="nome">Nome :</label>
+                    <input type="text"  placeholder="Nome">
+                    <label for="ano">Ano De Nascimento : </label>
+                    <input type="number" name="" id="ano1"  placeholder="Ano de Nasc">
+                    <div class="content">
+                        <div class="item">
+                            <label for="email">Email : </label>
+                            <input type="email" name="" id="email1" placeholder="Email">
+                        </div>
+                        <div class="item">
+                            <label for="tel">Telefone : </label>
+                            <input type="tel" name="" id="tel1" placeholder="Telefone" >
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="item">
+                            <label for="morada">Morada : </label>
+                            <input type="text" name="" id="morada1"  placeholder="Morada">
+                        </div>
+                        <div class="item">
+                            <label for="sexo">Sexo : </label>
+                            <input type="text" id="sexo1" placeholder="Sexo" >
+                        </div>
+                    </div>
+                    <label for="pass">Palavra Passe : </label>
+                    <input type="text" name="" id="pass1" placeholder="Palavra pass" >
+                
+                    <button  class="salvar botao" onclick="saveData('users-project')">Salvar</button>
+                </div>
+
+                <div class="cad lugares-cad">
+                    <form action="#">
+                        <input type="text" name=""  placeholder="Nome do Lugar">
+                        <input type="text" name=""  placeholder="Nome da Província">
+                        <input type="text" name=""  placeholder="Nome do Município">
+                        <button  class="salvar botao" onclick="saveData('lugares-cad')">Salvar</button>
+                    </form>
+                </div>
+            </article>
+
+        </main>
+    </section>
+    <!-- Area dos modal-->
+    <div class="content-modal"></div>
+</body>
+<script src="../js/adm.js"></script>
+</html>

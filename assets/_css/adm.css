@@ -1,0 +1,546 @@
+:root{
+    --vermelha:rgb(229, 55, 55);
+    --preta:black;
+    --preta1:rgba(40, 38, 38, 1);
+    --branca:rgba(255, 255, 255, 0.806);
+    --fundoPreto:rgba(0, 0, 0, 0.9);
+    --fundoHorario:rgba(0, 0, 0, 0.581);
+    --vermelho-horario:rgba(229, 55, 55, 0.2);
+    --fundoHospedagem:rgba(0, 0, 0, 0.9);
+}
+ul li{
+    cursor: pointer;
+}
+body{
+    background: linear-gradient(var(--fundoPreto),var(--fundoPreto)),url(../imagens/logo.png) no-repeat;
+}
+header{
+    position: fixed;
+    margin: 0;
+    z-index: 1;
+}
+header .user{
+    position: relative;
+}
+header .user i.fa-search{
+    position: absolute;
+    top: 0px;
+    right: 9%;
+    font-size: 11pt;
+    padding: 7px 10px;
+    background-color: var(--preta1);
+    border-radius: 0 20px 20px 0;
+}
+
+header .user input{
+    padding: 7px 15px;
+    border-radius: 20px;
+    width: 30em;
+    background-color: var(--vermelho-horario);
+    margin-right: 20px;
+    color: var(--branca);
+}
+header .user input::-webkit-input-placeholder{
+    color: var(--branca);
+}
+
+header .user .notificacao{
+    position: relative;
+}
+header .user .notificacao span{
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--vermelho-horario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .user .fa-bars{
+    margin-right: 15px;
+    display: none;
+}
+header .user i{
+    cursor: pointer;
+}
+/*Esterializacao do section*/
+section{
+    width: 100%;
+    height: 99vh;
+}
+section .menu{
+    display: block;
+    position: fixed;
+    width: 20%;
+    height: 33.5em;
+    top: 4em;
+    left: 15px;
+    border-radius: 2px;
+    color: var(--branca);
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.13);
+    padding: 10px;
+}
+
+section .menu h3{
+    padding:10px 5px;
+    background-color: var(--vermelha);
+    border-radius: 2px;
+    margin-bottom: 20px;
+    color: var(--branca);
+}
+section .menu ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    padding: 5px;
+    border-bottom: 1px solid transparent;
+}
+section .menu ul li:hover{
+    border-bottom-color: var(--vermelha);
+}
+section .menu .sub-menu{
+    margin:10px;
+    display: none;
+    transition: all 1s;
+}
+
+section .menu ul li:hover>ul{
+    display: block;
+}
+section main{
+    position: fixed;
+    z-index: 0;
+    width: 77%;
+    height: 100vh;
+    margin: 0em 0 0 22%;
+    border-radius: 2px;
+    padding-top: 6em;
+}
+section main article{
+    position: absolute;
+    display: none;
+    width: 99%;
+    height: 31.5em;
+    border-radius: 2px;
+    padding: 3.5em 1em;
+    color: var(--branca);
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.06);
+}
+section main article.art::after{
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 25px;
+    border-radius: 2px;
+    width: 92%;
+    background-color: var(--vermelha);
+    color: var(--branca);
+    text-transform: uppercase;
+
+}
+section main article span.comp-nome{
+    position: absolute;
+    z-index: 1;
+    top: -15px;
+    right: 10%;
+    font-size: 15pt;
+    color: var(--branca);
+}
+.visualizar{
+    position: relative;
+}
+section main .cadastro::after{
+    content:'Cadastrar';
+}
+section main .visualizar::after{
+    content:'Visualizar';
+}
+section main .estatistica::after{
+    content:'Estatística';
+}
+section main .notificacao::after{
+    content: 'Notificações';
+}
+section main .editar::after{
+    content: 'editar';
+}
+
+/*Notificações*/
+section main .notificacao{
+    display: block;
+}
+section main .notificacao ul{
+    width: 95%;
+    margin: auto;
+    list-style: none;
+}
+section .notificacao ul li{
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 2px;
+    background : var(--branca);
+    color: var(--preta);
+}
+
+/*Visualizar*/
+.visualizar .div{
+    display: none;
+    position: absolute;
+    width: 95%;
+    padding: 10px;
+    height: 27em;
+}
+.visualizar div::-webkit-scrollbar{
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    display: block;
+}
+.visualizar div::-webkit-scrollbar-thumb{
+    background-color: var(--preta1);
+    border-radius: 2px;
+}
+
+.visualizar div ul li{
+    position: relative;
+    list-style: none;
+    padding: 20px 10px;
+    margin: 20px;
+    width: 97%;
+    border-radius: 2px;
+    background-color: var(--branca);
+    color: var(--preta);
+}
+
+.visualizar div ul li img{
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 5px solid rgb(30, 30, 30);
+}
+.visualizar ul li .div-edit{
+    position: absolute;
+    display: block;
+    z-index: 1;
+    left: 60%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16em;
+    color: black;
+}
+
+.visualizar div  li .div-edit a{
+    display: inline-block;
+    color: var(--fundoHospedagem);
+    text-decoration: none;
+    margin: 0 5px;
+    padding: 5px;
+    border-bottom: 1px solid transparent;
+    font-style: italic;
+    font-size: 11pt
+}
+.visualizar div ul li a:hover{
+    border-bottom-color: var(--vermelha);
+}
+.visualizar .detalhes{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 50%;
+    height: 70%;
+    background-color:var(--preta1);
+    color: var(--branca);
+}
+.visualizar .detalhes::after{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "Mais Detalhes";
+    padding: 10px 5px;
+    width: 95%;
+    background-color: var(--vermelha);
+    border-radius: 2px;
+    color: var(--branca);
+} 
+.visualizar .detalhes ul li{
+    list-style: none;
+    margin: 13px 10px;
+}
+.visualizar .detalhes img{
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    border-radius: 50%;
+    width: 6em;
+    height: 6em;
+}
+.visualizar .detalhes .voltar{
+    position: absolute;
+    z-index: 1;
+    top: 1em;
+    right: 20px;
+    background-color: transparent;
+    color: var(--branca);
+    font-weight: bolder;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/*Cadastrar e editar*/
+.cadastro, 
+.editar{
+    display: block;
+    padding-top: 3em;
+}
+.cadastro div.cad , 
+.editar .cad{
+    position: relative;
+    margin: auto;
+    width: 90%;
+    padding-top: 3em;
+    display: none;
+}
+.cadastro .cad::after , 
+.editar .cad::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 2px;
+    padding: 10px;
+    width: 100%;
+    background-color: var(--branca);
+    color: var(--preta);
+}
+.cadastro .cad::after{
+    content: 'Faça aqui o Cadastro';
+}
+.cadastro .cad input,
+ .editar .cad input{
+    width: 100%;
+    background: transparent;
+    border-bottom: 1px solid var(--vermelha);
+    padding: 7px 0px;
+    margin: 15px 0;
+    color: var(--branca);
+}
+.cadastro .selecionar,
+.editar .selecionar {
+    width: 100%;
+    margin-top: 20px;
+}
+.cadastro .selecionar label,
+.editar .selecionar label {
+    padding: 10px;
+    border-radius: 2px;
+    background-color: var(--branca);
+    margin: 20px 0;
+    color: var(--preta);
+}
+.cadastro .selecionar ul,
+.editar .selecionar ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3px 3px 3px 0;
+}
+.cadastro .selecionar ul li,
+.editar .selecionar ul li {
+    margin: 10px 10px 10px 0;
+    font-size: 10pt;
+    padding: 5px;
+    border-radius: 2px;
+    transition: all .3s;
+}
+.cadastro .selecionar ul li:hover ,
+.editar .selecionar ul li:hover{
+    background-color: var(--vermelho-horario);
+}
+
+.cadastro .cadastrar ,
+.editar .salvar{
+    width: 12rem;
+}
+.editar .cad{
+    position: absolute;
+    display: none;
+    padding-top: 0;
+}
+
+.editar{
+    display: none;
+}
+.editar .usuario-cad input{
+    padding: 5px 0;
+}
+.editar .usuario-cad label{
+    font-size: 12pt;
+    margin: 0px 0;
+}
+.editar .usuario-cad .content{
+    height: 3em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.editar .usuario-cad .item{
+    width: 47%;
+}
+
+/*Estatistica*/
+.estatistica{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.estatistica .est{
+    position: relative;
+    width: 45%;
+    height: 12em;
+    padding: 4em 0 0 4em;
+    border-radius: 2px;
+    margin: 0 0 40px 0;
+    border: 1px solid rgba(255, 255, 255, 0.093);
+    background-color: var(--branca);
+    color: var(--preta);
+}
+
+.estatistica .est::before{
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 40%;
+    padding: 10px;
+    border-radius: 2px;
+    background-color: var(--vermelha);
+    color: var(--branca);
+}
+
+.estatistica .est ul li{
+    margin: 10px ;
+    list-style: none;
+}
+.estatistica .usuario::before{
+    content: "Usuários";
+}
+
+.estatistica .companinhas::before{
+    content: "Companinhas";
+}
+.estatistica .hoteis::before{
+    content: "Hoteis";
+}
+.estatistica .lugares::before{
+    content: "Lugares Turístico";
+}
+
+
+@media (max-width:850px){
+    header .user{
+        display: flex;
+    }
+    header .user .fa-bars{
+        display: block;
+    }
+    header .user input , header .user .fa-search{
+        display:none;
+    }
+    section .menu{
+        display: none;
+        position: absolute;
+        top: 5em;
+        left: 0;
+        z-index: 1;
+        width: 50%;
+        flex-direction: column;
+        border-radius: 2px  ;
+        background-color: rgb(212, 210, 210);
+    }
+    section .menu h3 {
+        border-radius: 2px;
+        background-color: transparent;
+        border-bottom: 1px solid var(--vermelha);
+        text-align: center;
+        color: 11pt;
+    }
+    section .menu ul li{
+        color: var(--preta);
+    }
+
+    section main {
+        width: 100%;
+        margin: 0;
+    }
+    section main .art{
+        width: 100%;
+        padding-left: 0;
+    }
+    section main article.art::after{
+        border-radius: 2px    }
+    section .art .cad {
+        width: 96%;
+        margin: auto;
+    }
+    cadastro .selecionar ul li {
+        margin: 5px 5px 5px 0;
+        font-size: 09px;
+    }
+    cadastro .selecionar label {
+        font-size: 10pt;
+    }
+
+    .visualizar div ul li {
+        padding: 10px 10px;
+        margin: 10px;
+        font-size: 10pt;
+        display: flex;
+        padding-right: 4em;
+    }
+    .visualizar div ul li img{
+        width: 40px;
+        height: 40px;
+        top: 6px;
+        right: 3px;
+        border: 0;
+    }
+
+    .visualizar div ul li a {
+        font-size: 08pt;
+        margin: 0;
+    }
+
+    .visualizar .detalhes ul li,
+    .estatistica .est ul li{
+        font-size: 10pt;
+    }
+    .estatistica .est{
+        padding-left: 5%;
+    }
+    .estatistica .est::before{
+        font-size: 10pt;
+        left: -5px;
+    }
+    .estatistica {
+        justify-content: space-around;
+        margin: auto;
+        padding-right: 0;
+    }
+
+    
+}
+@media (max-width:1030px) {
+    section .menu h3{
+        font-size: 11pt;
+    }
+    section .menu ul li{
+        font-size: 11pt;
+    }
+}

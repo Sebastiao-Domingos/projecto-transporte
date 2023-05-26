@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viaja em Angola </title>
+    <link rel="stylesheet" href="../fontawesome-free-6.1.2-web/css/all.css">
+    <link rel="stylesheet" href="../assets/_css/logo.css">
+    <link rel="stylesheet" href="../assets/_css/rodape.css">
+    <link rel="stylesheet" href="../assets/_css/botao.css">
+    <link rel="stylesheet" href="../assets/_css/index.css">
+    <link rel="stylesheet" href="../assets/_css/modals.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-bus"></i>
+                <p>Angola</p>
+            </div>
+            <ul>
+                <li><a class="sign-in link" href="#" onclick="trocarSignInUp(0)">Sign in</a></li>
+                <li><a class="sign-up link" href="#" onclick="trocarSignInUp(1)">Sign up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <article class="secction section-1">
+            <div class="container-1 container">
+                <div class="conteudo">
+                    <h1>Viaja em Angola</h1>
+                    <p>
+                        Este site foi criada com o objectivo de ajudar as pessoas
+                        que querem viajar para qualquer parte de Angola .Sem sair de casa agora
+                        é possivel comprar o teu bilhete de viajem para diferentes empresas de Transportes
+                        Com maior facidade, e rapidez
+                    </p>
+        
+                    <button class="botao" id="sign-in"> Comprar Bilhete </button>
+                </div>
+        
+                <div class="cont-sign-in">
+                    <div class="caixa-input">
+                        <input type="email" name="" id="mail" required onfocus="subir(0,1)" onblur="subir(0,0)">
+                        <label for="" class="texto txt1">Email</label>
+                    </div>
+        
+                    <div class="caixa-input">
+                        <input type="password" name="" id="palavra-passe" onfocus="subir(1,1)" onblur="subir(1,0)">
+                        <label for="" class="texto txt2">Palavra Passe</label>
+                    </div>
+                    <a href="#" class="botao" id="sign-in1">sign-in  <i class="fas fa-sign-in"></i></a>
+
+                    <div class="recuperar">
+                        <p>Se não tens uma conta, <a href="#" onclick="trocarSignInUp(1)">clica aqui</a></p>
+                        <p>Para recuperar a palavra passe <a href="#">clica aqui</a> </p>
+                    </div>
+                </div>
+            </div>
+    
+            <!--Content sign up-->
+            <div class="container-2 container">
+                <div class="sign up-1">
+    
+                    <div class="caixa-input">
+                        <input type="text" name="" class="input"  id="nome" onfocus="subir(2,1)" onblur="subir(2,0)">
+                        <label for="" class="texto txt1">Nome</label>
+                    </div>
+    
+                    <div class="caixa-input">
+                        <input type="number" name="" class="input"  id="ano" onfocus="subir(3,1)" onblur="subir(3,0)">
+                        <label for="" class="texto txt1">Ano-Nascimento</label>
+                    </div>
+    
+                    <div class="caixa-input">
+                        <input type="mail" name="" class="input"  id="e-mail" onfocus="subir(4,1)" onblur="subir(4,0)" required>
+                        <label for="" class="texto txt1">E-mail</label>
+                    </div>
+    
+                    <button class="botao" onclick="signUp(1,0)">Próximo</button>
+                </div>
+    
+    
+                <div class="sign up-2">
+                    <div class="caixa-input">
+                        <input type="tel" name=""  class="input" id="tel" onfocus="subir(5,1)" onblur="subir(5,0)" >
+                        <label for="" class="texto txt1">Telefone</label>
+                    </div>
+                    <div class="caixa-input">
+                        <input type="text" name="" class="input"  id="morada" onfocus="subir(6,1)" onblur="subir(6,0)">
+                        <label for="" class="texto txt1">Morada Actual</label>
+                    </div>
+    
+                    <div class="caixa-input">
+                        <article>
+                            <label for="masc">Masculino</label><input type="radio" name="sexo" id="masc" checked>
+                            <label for="fem">Femenino </label><input type="radio" name="sexo" id="fem">
+                        </article>
+                    </div>
+    
+                    <div class="content-bt">
+                        <button class="botao" onclick="signUp(0,-1)">Voltar</button>
+                        <button class="botao" onclick="signUp(2,0)">Próximo</button>
+                    </div>               
+                </div>
+                <div class="sign up-3">
+                    <div class="caixa-input">
+                        <input class="input" type="password" name="" id="pass1" onfocus="subir(7,1)" onblur="subir(7,0)">
+                        <label for="" class="texto txt1">Palavra Passe</label>
+                    </div>
+                    <div class="caixa-input">
+                        <input class="input" type="password" name="" id="pass2" onfocus="subir(8,1)" onblur="subir(8,0)">
+                        <label for="" class="texto txt1">Confirmar a Palavra Passe</label>
+                    </div>
+                    <a href="#" class="botao" id="btn-concluir">Concluir</a>
+                </div>
+            </div>
+        </article>
+        <article class="section section-2">
+            <div class="content cont-1">
+                <div class="img"> <i class="fas fa-users"></i> </div>
+                <p>Somos uma empresa online de nome Viaja em Angola, vendemos blilhetes de passagem de vários tipos de companinhas de Transportes a nivél nacional. </p>
+                
+            </div>
+            <div class="content cont-2">
+                <p>
+                    A Viaja em Angola, faz que as companinhas de transportes estejam mais próximo dos nossos clientes,
+                    que os nossos clientes tenham uma viajem segura, e não só , faz que compra dos bilhetes seja mais rápido e eficaz. 
+                </p>
+                    
+                <div class="img"><i class="fas fa-bus"> </i> <i class="fas fa-taxi"></i></div>
+            </div>
+            <div class="content cont-3">
+                <div class="img"><i class="fas fa-home"></i> <i class="fas fa-building"></i> </div>
+                <p>
+                    A Viaja em Angola é uma empresa online que está, localizada em todas as 18 províncias do nosso País.
+                    Devido as diferentes companinhas de transportes das melhores do nosso País, dos melhores hoteis de cada provínica.
+                </p>
+            </div>
+            <div class="content cont-4">
+                <p>
+                    Nós trabalhamos com as melhores companinhas de transportes do nosso País, que realizam para Nós os servíços
+                    referidos. Temos também difirentes contacto com os melhores hoteis de cada Província a nível Nacional, sem esquecermos os lugares turístico.
+                </p>
+                <div class="img"><i class="fas fa-bus"> </i> <i class="fas fa-taxi"></i></div>
+            </div>
+            <div class="content cont-5">
+                <div class="img"><i class="fas fa-bus"> </i> <i class="fas fa-taxi"></i></div>
+                <p>
+                    As companinhas são de transportes, que têm como objectivo de transportar os nossos clientes de uma província para outra seguramente,
+                    estas estão localizadas em diferentes províncias do nosso País.
+                </p>
+            </div>
+            <div class="content cont-6">
+                <p>
+                    Com o objectivo de ajudar os nossos clientes não só na questão de deslocamento, também ajudamos-os a saber dos diferentes hoteis de 
+                    cada província. Com a razão de oferecer uma boa viajam e boa hospedagem.
+                </p>
+                <div class="img"> <i class="fas fa-building"></i> <i class="fas fa-building"></i></div>
+            </div>
+
+            <div class="content cont-7">
+                <div class="img"> <i class="fas fa-moon"></i> <i class="fas fa-tree"></i></div>
+                <p>
+                    Para aqueles clientes que não têm o bjectivo de visitar um familiar, empresa , ou mesmo fazer um negócio, a Viaja em Angola pensou em
+                    trazer os melhores lugares turístico de Angola, onde poderás passar as férias, conhecer a mãe natureza e as suas maravilhas.
+                </p>
+            </div>
+        </article>
+        <button class="botao botao-movel">Comprar Bilhete</button>
+    </section>
+    <footer>
+        <div class="parte-1">
+            <ul>
+                <li><a href=""> Contacta-nos</a></li>
+                <li><a href="">Definições</a> </li>
+                <li><a href="">Siga-nos</a> </li>
+            </ul>
+            <ul>
+                <li> <a href="">WhatsApp <i class="fab fa-whatsapp"></i></a></li>
+                <li> <a href="">facebook <i class="fab fa-facebook"></i></a></li>
+                <li> <a href="">GitHub <i class="fab fa-github"></i></a></li>
+            </ul>
+        </div>
+
+       <div class="parte-2">
+           <p>Feito pelo Sebatião Afonso Domingos , Formador Osvaldo, Academinha DLINE - CODE</p>
+       </div> 
+
+    </footer>
+
+    <!-- Area dos modal
+   
+    -->
+    <a href=""  target="_"></a>
+    <div class="content-modal">
+        
+    </div>
+    <script src="../assets/js/bacground.js"></script>
+</body>
+</html>

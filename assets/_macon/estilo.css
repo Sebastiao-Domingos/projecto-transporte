@@ -1,0 +1,276 @@
+*{ box-sizing: border-box; padding: 0%; margin: 0%; font-family: sans-serif;}
+
+body{
+    background: linear-gradient(rgba(0, 102, 255, 0.76),rgba(0, 0, 0, 0.589)) , url(./_fotos_macon/LOGO-MACON\ \(1\).png);
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+}
+.menu{
+    position: fixed;
+    background: url(./_fotos_macon/cabecalho.jpg);
+    background-position:center;
+    background-size: cover;
+    top: 0;
+    width: 100%;
+    height: 4em;
+}
+
+.menu,header nav ul li span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav ul{
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 20em;
+}
+header nav ul li{
+    position: relative;
+    list-style: none;
+    color: rgb(245, 233, 233);
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 5px;
+    border-bottom: 1px solid transparent;
+    transition: all .4s;
+}
+header nav ul .first,header nav ul li:hover{
+    border-bottom-color: rgb(245, 233, 233);
+}
+header nav ul li span{
+    position: absolute;
+    top: -13px;
+    right: -25px;
+    font-size: 12pt;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.377),rgba(0, 0, 255, 0.308)) , url(./_fotos_macon/VINTRINE-MACON-V2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+header span{
+    font-size: 10vw;
+    color: white;
+}
+
+header .notificacao {
+    position: absolute;
+    top: 8em;
+    left: 150%;
+    transform: translateX(-50%);
+    width: 90%;
+    min-height: 500px;
+    background-color: rgb(42, 121, 240);
+    padding: 3em;
+    border-radius: 5px;
+}
+
+header .bilhete-cliente span:hover {
+    color: rgb(203, 22, 22);
+}
+header .notificacao::after{
+    position: absolute;
+    width: 95%;
+    padding: 20px;
+    border-radius: 5px;
+    content: "Notificações";
+    text-transform: uppercase;
+    font-weight: bolder;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+}
+.notificacao ul li{
+    list-style: none;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    background-color: rgb(226, 234, 236);
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+header .bilhete-cliente span{
+    font-size: 16pt;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+header .bilhete-cliente::after{
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    width: 94%;
+    transform: translateX(-50%);
+    border-bottom: 1px dotted whitesmoke;
+    padding: 10px 0;
+    content: 'Mais detalhes do Bilhete';
+    color: whitesmoke;
+    text-align: center;
+    text-transform: uppercase;
+}
+header .bilhete-cliente{
+    position: absolute;
+    display: none;
+    top: 8em;
+    left: 30%;
+    min-width: 30rem;
+    max-width: 40rem;
+    min-height: 500px;
+    background-color: rgb(19, 102, 228);
+    padding: 5rem 2rem 2em 2rem;
+    border-radius: 5px;
+}
+.bilhete-cliente h3 , .bilhete-cliente ul {
+    z-index: 1;
+}
+.bilhete-cliente h3{
+    margin: 20px 0;
+    text-align: right;
+    color: whitesmoke;
+}
+.bilhete-cliente ul li{
+    list-style:none;
+    margin: 25px 0;
+    color: white;
+}
+.bilhete-cliente ul li:last-child{
+    text-align: right;
+    font-style: italic;
+}
+.bilhete-cliente img{
+    position: absolute;
+    top: 10px;
+    width: 400px;
+    height: 400px;
+    opacity: .3;
+}
+section{
+    padding: 40px;
+    width: 90%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "b c" "d a";
+    margin: auto;
+}
+section div{
+    padding:10px;
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.379);
+    color: white;
+}
+.cont1{
+    grid-area: a;
+}
+.cont2{
+    grid-area: b;
+}
+.imagem1{
+    grid-area: c;
+    background: url(./_fotos_macon/bg-macon-frota.jpg) no-repeat center / cover;
+}
+.imagem2{
+    grid-area: d;
+    background: url(./_fotos_macon/MACON-CARGAS-02-400x284.jpg) no-repeat center / cover;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer a{
+    color: white;
+    padding: 6px 10px;
+    text-decoration: none;
+    background: blue;
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: all .3s;
+}
+footer a:hover{
+    background: white;
+    color: blue;
+    box-shadow: 0 0 10px;
+}
+footer article{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    padding: 3%;
+    background-color: rgba(255, 255, 255, 0.288);
+}
+footer h4{
+    margin: 30px auto;
+}
+.footer{
+    width: 100%;
+    height: 80px;
+    background: url(./_fotos_macon/banner-promo.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+video{
+    position: absolute;
+    right: 10%;
+    border-radius: 10px;
+    width: 80px;
+    opacity: .6;
+    transition: all .8s;
+}
+video:hover{
+    width: 400px;
+    right: 3%;
+    opacity: 1;
+}
+
+@media (max-width:680px) {
+    header{
+        padding: 10px;
+    }
+    section{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "b " "c" "d " "a";
+        margin: auto;
+    }
+    footer h4{
+        font-size: 10pt;
+    }
+    video{ 
+        width: 50px;
+    }
+}

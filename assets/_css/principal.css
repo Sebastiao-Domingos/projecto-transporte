@@ -1,0 +1,1380 @@
+:root{
+    --vermelha:rgb(229, 55, 55);
+    --preta1:rgba(40, 38, 38, 1);
+    --branca:rgba(255, 255, 255, 0.806);
+    --fundoPreto:rgba(0, 0, 0, 0.816);
+    --fundoHorario:rgba(0, 0, 0, 0.581);
+    --vermelho-horario:rgba(229, 55, 55, 0.2);
+    --vermalha-escura : rgb(108, 42, 42) ;
+    --fundoHospedagem:rgba(0, 0, 0, 0.9);
+}
+button,.comprar-bilhete label{
+    cursor: pointer;
+}
+header{
+    height:auto;
+}
+
+header nav .link2{
+    background-color: var(--vermelhaBotao);
+}
+
+header .menu-nav{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+header .fa-bars , header .menu-nav button{
+    font-size: 16pt;
+    cursor: pointer;
+    display: none;
+}
+header nav ul{
+    width: 40rem;
+}
+header nav img{
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+}
+header nav .user{
+    display: none;
+    position: absolute;
+    right:2px;
+    padding: 20px;
+    top: 4em;
+    width: 15rem;
+    height: auto;
+    background-color: transparent;
+    border-bottom-left-radius: 4px;
+    animation:  background-come 1.4s forwards;
+}
+header nav .user span.sair{
+    position: absolute;
+    right: 15px;
+    color: var(--vermelha);
+    cursor: pointer;
+}
+header nav .user ul{
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+header nav .user ul p{
+    font-size: 10pt;
+    margin: 30px 0 20px 0;
+}
+header nav .user ul li:not( :last-child){
+    margin: 10px;
+    border-bottom: 1px dotted var(--vermelhaBotao);
+    cursor: pointer;
+    color: var(--branca);
+    text-align: left;
+}
+nav .user ul li a,nav .user ul li{
+    width: 100%;
+    padding: 5px 0;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+header nav .user a{
+    padding: 5px;
+    text-decoration: none;
+    color: var(--branca);
+    transition: all .3s;
+}
+header nav .user li:hover{
+    border-bottom-color: var(--vermelha);
+}
+nav .user .notificacaobtn{
+    position: relative;
+}
+nav .user .notificacaobtn span{
+    position: absolute;
+    top: -15px;
+    left: 7em;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--vermelhaBotao);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header nav .imagem-div{
+    position: relative;
+}
+header nav .imagem-div label{
+    position: absolute;
+    display: none;
+    top: 0px;
+    left: -110px;
+    width: 100px;
+    padding: 10px;
+    border-radius: 2px;
+    background-color: transparent;
+}
+header nav .imagem-div label::after{
+    position: absolute;
+    content: '';
+    top: 10px;
+    right: -20px;
+    border: 10px solid transparent;
+    border-color: transparent transparent transparent var(--branca);
+}
+section{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: var(--fundoHorario);
+}
+section .principal{
+    width: 100%;
+    height: auto;
+}
+section .principal .comprar-bilhete{
+    position: relative;
+    height: 34em;
+}
+section .principal .conteudo{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: var(--branca);
+}
+ .conteudo h2 ,.conteudo p{
+    font-size: 200%;
+    margin-bottom: 20px;
+    opacity: .9;
+}
+section .principal .destaques{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+section .lugares-destaque{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+section .lugares-destaque{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+.lugares-destaque .lugares{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/*Label comprar*/
+.label-comprar{
+    position: absolute;
+    left: 10%;
+    bottom: 30%;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid var(--branca);
+    background-color: var(--vermelhaBotao);
+    color: var(--branca);
+    height: 3em;
+    cursor: pointer;
+    text-decoration: none;
+    animation:  botao-movel  5s infinite;
+}
+.label-comprar::before{
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    border: 1.5em solid transparent;
+    border-color: var(--branca) transparent transparent;
+}
+
+.lugares-destaque .lugar-1{
+    left: 0%;
+    background:url(../imagens/beguela.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.lugares-destaque .lugar-2{
+    left: 100%;
+    background:url(../imagens/quedas.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+.lugares-destaque .lugar-3{
+    left: 100%;
+    background:url(../imagens/critos.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.lugares-destaque .lugar-4{
+    left: 100%;
+    background:url(../imagens/montanha.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.lugares-destaque .lugar-5{
+    left: 100%;
+    background:url(../imagens/ANGOLA\ =\ 100\ IMAGINI\ \(1\).jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.lugares-destaque .sombra{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/*comprar bilhete */
+section .principal .comprar-bilhete{
+    position: relative;
+    display: block;
+    height: 57em;
+    padding-top: 3em;
+    background-color: var(--fundoHorario);
+}
+.comprar-bilhete .content .tela-etapas::after{
+    position:absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    text-align: center;
+    font-size: 24pt;
+    padding: 15px 0;
+    background-color: rgb(108, 42, 42);
+    border-radius: 5px;
+    content: 'Comprar Bilhete de Viaja';
+    text-transform: uppercase;
+    color: var(--branca);
+}
+.comprar-bilhete .tela-etapas,
+.comprar-bilhete .tela-etapas .ida-volta ,
+.comprar-bilhete .tela-etapas .etapas,
+.comprar-bilhete .tela-etapas .ida-volta .item-ida{
+    display: flex;
+}
+.comprar-bilhete .tela-etapas{
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 90%;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(30, 30, 30);
+    border-radius: 10px;
+}
+.comprar-bilhete .content{
+    margin: auto;
+    width: 55rem;
+    height: 97%;
+    color: var(--branca);
+    padding-top: 3em;
+    overflow: hidden;
+}
+.comprar-bilhete .tela-etapas .etapas{
+    position: absolute;
+    left: 180%;
+    transform: translateX(-50%);
+    width: 95%;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 3px;
+}
+.comprar-bilhete .tela-etapas .ida-volta{
+    width: 100%;
+    justify-content: space-between;
+}
+.comprar-bilhete .tela-etapas .ida-volta .item-ida{
+    width: 25em;
+    align-items: center;
+}
+.comprar-bilhete .ida-volta .item-ida .circle-radio{
+    width: 15px;
+    height: 15px;
+    margin-right: 15px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--branca);
+}
+.comprar-bilhete .ida-volta .item-ida input[ type = 'radio' ]:checked ~ .circle-radio{
+    background-color: var( --vermelhaBotao );
+}
+.comprar-bilhete .ida-volta .item-ida input[ type = 'radio' ] {
+    display: none;
+}
+.comprar-bilhete .tela-etapas .texto{
+    padding: 15px 10px;
+    margin: 40px 0 20px 0;
+    background-color: var(--vermelhaBotao);
+    border-radius: 3px;
+    width: 100%;
+    display: flex;
+    text-transform: uppercase;
+}
+.comprar-bilhete .tela-etapas .et1{
+    left: 50%;
+    display: block;
+}
+.comprar-bilhete .tela-etapas .et1 .data-input{
+    display: flex;
+    flex-direction: column;
+}
+.comprar-bilhete .etapas .ida-volta label{
+    margin-right: 10%;
+    color: var(--branca);
+}
+.comprar-bilhete .etapas input{
+    position: relative;
+    padding: 5px 5px 5px 0px;
+    background-color: transparent;
+    border-bottom: 1px solid var(--branca);
+    color: var(--branca);
+    font-size: 12pt;
+    margin: 15px 0;
+}
+.comprar-bilhete .etapas article{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.comprar-bilhete .etapas button{
+    position: relative;
+    width: 200px;
+    margin: 10px;
+    transform: translate(0%,0%);
+    color: var(--branca);
+    left: 0%;
+}
+.comprar-bilhete .etapas .btn-prox{
+    margin:3em auto;
+    width: 50%;
+}
+.comprar-bilhete .etapas article.btn{
+    width:100%;
+    height: 6em;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 0;
+}
+
+.comprar-bilhete .paga-aqui{
+    margin-top: 30px;
+    padding: 10px;
+    background-color: var(--vermelhaBotao);
+    width: 300px;
+    text-align: center;
+    border-radius: 3px;
+}
+.comprar-bilhete .preco-total {
+    margin:30px 0  20px 0;
+    padding: 10px;
+    font-size: 16pt;
+    background-color: var(--branca);
+    color: var(--vermelha);
+    text-align: center;
+    font-weight: bolder;
+}
+
+.section{
+    position: relative;
+    width: 100%;
+}
+/*As companinhas*/
+section .companinhas{
+    padding-top: 5.5em;
+    display: none;
+    background: var(--preta1);
+    background-position: center;
+}
+section .companinhas .container{
+    width: 100%;
+    height: 45%;
+    display: flex;
+    justify-content: space-around;
+}
+.companinhas .container .tipos ,
+ .companinhas .container .horario{
+    border-radius: 5px;
+    background-color: var(--fundoHorario);
+    height: auto;
+    color: var(--branca);
+    padding: 5em 20px;
+}
+.companinhas .container .tipos{
+    width: 20%;
+}
+.tipos h3{
+    color: var(--vermelha);
+}
+.tipos ul{
+    width: 100%;
+}
+.tipos ul li{
+    list-style: none;
+    padding: 5px;
+    margin: 20px 0;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    transition: all .3s;
+}
+
+.companinhas .container .horario{
+    width: 75%;
+}
+.horario .texto{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.horario h3{
+    margin-bottom:20px;
+    color: var(--vermelha);
+}
+.horario span{
+    color: var(--vermelha);
+}
+.companinhas .horario table{
+    width: 100%;
+    height: 18rem;
+    border-spacing: 0;
+}
+.horario table thead{
+    text-transform: uppercase;
+    background-color: var(--branca);
+    height: 4em;
+    color: var(--preta);
+}
+.horario table tbody td.td{
+    border-bottom: 1px solid var(--vermelha);
+}
+.horario tbody tr:hover{
+    background-color: var(--vermelho-horario);
+}
+.horario table td{
+    padding-left: 20px;
+    text-align: center;
+}
+.horario table td i{
+    cursor: pointer;
+}
+.companinhas .container-1{
+    margin: auto;
+    width: 100%;
+    height: 50%;
+    padding-top: 2rem;
+}
+.companinhas .container-1 ul,
+.companinhas .container-1 ul li {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap:wrap ;
+}
+.companinhas .container-1 ul li{
+    position: relative;
+    list-style: none;
+    height: 9em;
+    border-radius: 2px;
+    color: var(--branca);
+    font-size: 20pt;
+    padding: 3%;
+    margin: 2% 3%;
+    background-color: var(--fundoHorario);
+    border-radius: 0 0 20px 20px;
+    cursor: pointer;
+    transition: all .5s;
+}
+.companinhas .container-1 ul li::after{
+    position: absolute;
+    content: "Preço Da Viajem";
+    width: 95%;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 0;
+    border-bottom: 1px solid var(--vermelha);
+    font-size: 14pt;
+    text-align: center;
+    text-transform: uppercase;
+}
+.companinhas .container-1 ul .li-1::after{
+    content: "Preço Normal";
+}
+.companinhas .container-1 ul .li-2::after{
+    content: "Ida e Volta";
+}
+.companinhas .container-1 ul .li-3::after{
+    content: "Duplo Destino";
+}
+.companinhas .container-1 ul .li-4:after{
+    content: "Carregamento Normal";
+}
+.companinhas .container-1 ul .li-5::after{
+    content: "Carregamento acompanhado";
+}
+.companinhas .container-1 ul .li-6::after{
+    content: "Mega Carregamento";
+}
+.companinhas .container-1 .etiqueta-comprar{
+    position: absolute;
+    display: none;
+    padding: 10px;
+    background-color: var(--fundoHorario);
+    border-radius: 2px;
+    color: var(--branca);
+}
+/*estilizações da hospedagem e lugares turisticos*/
+.hospedagem,
+.lugares-turistico{
+    position: relative;
+    background: var(--preta1);
+    display: none;
+}
+.hospedagem .content,
+.lugares-turistico .content{
+    margin: auto;
+    width: 97%;
+    height: 58%;
+    padding:5.5em 0 30px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+.hospedagem .hotel-principal .outras-imagens,
+.lugares-turistico .lugares-principal .outras-imagens{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.hospedagem .hotel-principal .outras-imagens li,
+.lugares-turistico .lugares-principal .outras-imagens li{
+    cursor: pointer;
+    list-style: none;
+    width: 70px;
+    height: 60px;
+    margin: 40px 40px 0 0;
+    transition: all .4s;
+    background-position: center;
+    background-size: cover;
+}
+.hospedagem .hotel-principal .outras-imagens li:hover,
+.lugares-turistico .lugares-principal .outras-imagens li:hover{
+    transform: scale(1.4);
+}
+.hospedagem .content .hotel,
+.hospedagem .content .hotel-principal,
+.lugares-turistico .content  .menu,
+.lugares-turistico .content .lugares-principal{
+    height: auto;
+    border-radius: 5px;
+    background-color: var(--fundoHorario);
+    padding: 20px 1%;
+    color: var(--branca);
+}
+.hospedagem .content .hotel,
+.lugares-turistico .content .menu{
+    position: relative;
+    width: 20%;
+}
+.hospedagem .hotel h3,
+.lugares-turistico .content .menu h3{
+    padding:10px 5px;
+    color: var(--vermelha);
+    border-bottom: 1px solid var(--vermelha);
+}
+.hospedagem .hotel ul,
+.lugares-turistico .content .menu ul{
+    margin-top: 20px;
+    list-style: none;
+}
+.hospedagem .hotel ul li,
+.lugares-turistico .content .menu ul li{
+    margin: 10px 0;
+    padding: 5px;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    transition: all .4s;
+}
+.hospedagem .hotel ul li:hover,
+.lugares-turistico .content .menu ul li:hover{
+    border-bottom-color:var(--vermelha);
+}
+
+.hospedagem .hotel .pesquisa,
+.lugares-turistico .content .menu .pesquisa{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+.hospedagem .hotel .pesquisa input,
+.lugares-turistico .menu .pesquisa input{
+    padding: 5px;
+    border-radius: 20px;
+    width: 95%;
+    margin-top:20px;
+    display: none;
+}
+.hospedagem .hotel .pesquisa i,
+.lugares-turistico  .menu .pesquisa i{
+    position: absolute;
+    top: 55px;
+    left: 83%;
+    font-size: 15px;
+    color: var(--vermelha);
+    display: none;
+}
+.hospedagem .hotel .pesquisa span,
+.lugares-turistico .menu .pesquisa span{
+    right: 15px;
+    top: 15px;
+    color: var(--branca);
+}
+.hospedagem .hotel-principal .hotel-imagem,
+.lugares-turistico .lugares-principal .lugares-imagem{
+    position: relative;
+    width: 100%;
+    height: 28em;
+    overflow: hidden;
+}
+.hospedagem .content .hotel-principal,
+.lugares-turistico .content .lugares-principal{
+    width: 76%;
+}
+.hotel-principal .hotel-imagem .imagem,
+.lugares-turistico  .lugares-imagem .imagem{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+
+.hospedagem .descricao-hospedagem,
+.lugares-turistico .descricao-lugares{
+    width: 95%;
+    margin: auto;
+    border-radius: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4em 0em;
+}
+.hospedagem .descricao-hospedagem p,
+.lugares-turistico .descricao-lugares p{
+    position: relative;
+    width: 20em;
+    height: 18em;
+    padding: 7em  1em 1em 1em;
+    border-radius: 2px 20px;
+    background-color: var(--fundoHorario);
+    color: var(--branca);
+    transition: all .4s;
+    text-align: center;
+}
+.hospedagem .descricao-hospedagem p:hover,
+.lugares-turistico .descricao-lugares p:hover{
+    transform: scale(1.1);
+}
+.hospedagem .descricao-hospedagem p::after,
+.lugares-turistico .descricao-lugares p::after{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 97%;
+    text-align: center;
+    transform: translateX(-50%);
+    border-radius: 0;
+    content: "Localização";
+    padding: 15px 0;
+    color: var(--vermelha);
+    font-size: 25pt;
+    border-bottom: 1px solid var(--vermelha);
+}
+
+.hospedagem .descricao-hospedagem .p1::after,
+.lugares-turistico .descricao-lugares .p1::after{
+    content: "Província";
+}
+.hospedagem .descricao-hospedagem .p2::after,
+.lugares-turistico .descricao-lugares .p2::after{
+    content: "Município";
+}
+
+.hospedagem .descricao-hospedagem .p3::after,
+.lugares-turistico .descricao-lugares .p3::after{
+    content: "Descrição";
+}
+
+
+/*Lugares turisticos*/
+.lugares-turistico .content{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0 30px 0px;
+}
+.lugares-turistico .content .lugares{
+    width: 95%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: var(--branca);
+    margin:5em;
+}
+
+/*Notificacao*/
+.notificacao , .ajuda , .compras-cad{
+    position: relative;
+    background-color: var(--preta1);
+    min-height: 100vh;
+    display: none;
+    padding: 4rem 0;
+}
+.notificacao .content, .ajuda .content ,
+.compras-cad .content{
+    position: relative;
+    width: 90%;
+    min-height: 500px;
+    margin:3em auto 2em auto;
+    border-radius: 2px;
+    padding: 05em;
+    color: var(--branca);
+    background-color: var(--fundoHorario);
+}
+.notificacao .content::after, 
+.ajuda .content::after,
+.compras-cad .content::after{
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px 0;
+    width: 97%;
+    border-radius: 2px;
+background-color: var(--vermalha-escura);
+    color: var(--branca);
+    text-align: center;
+    font-size: 23pt;
+}
+.notificacao .content::after{
+    content: 'Notificações';
+}
+.ajuda .content::after{
+    content: 'Ajuda';
+}
+.compras-cad .content::after{
+    content: 'Minhas Compras';
+}
+.notificacao .content ul {
+    list-style: none;
+    width: 100%;
+    margin: auto;
+} 
+.notificacao .content ul li {
+    background-color: var(--branca);
+    color: var(--preta);
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 2px;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.notificacao .modal-detalhe {
+    display: none;
+    position: absolute;
+    width: 20rem;
+    height:20rem;
+    padding: 2em;
+    top: 13em;
+    left: 15%;
+    border-radius: 2px;
+    background-color: var(--preta1);
+}
+.notificacao .modal-detalhe ul li {
+    list-style: none;
+    margin: 15px 0;
+    color: var(--branca);
+    font-size: 11pt;
+}
+.notificacao .modal-detalhe span {
+    color: var(--vermelha);
+    cursor: pointer;
+    margin-left: 94%;
+}
+.notificacao .modal-detalhe img {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+}
+/*minhas compras*/
+.compras-cad table{
+    width: 100%;
+    border-spacing: 0;
+}
+.compras-cad table thead {
+    background-color: var(--preta1);
+}
+.compras-cad table td{
+    margin: 0px 0;
+    padding: 10px 0;
+}
+.compras-cad table td:last-child {
+    cursor: pointer;
+}
+.compras-cad table tr:not( :last-child ) td{
+    border-bottom: 1px dotted var(--vermelhaBotao);
+}
+.compras-cad table tbody tr:hover{
+    background-color: rgba(184, 43, 43, 0.09);
+}
+.compras-cad ul li .valor{
+    margin-left: 50%;
+    color: var(--vermalha-escura);
+}
+.compras-cad ul li span{
+    margin: 0 20px;
+}
+.compras-cad .detalhe{
+    display: none;
+    position: absolute;
+    top: 3em;
+    width: 25rem;
+    border-radius: 2px;
+    background-color: var(--preta1);
+    padding: 4em 1em 1em 1em;
+}
+.compras-cad .detalhe::after{
+    position: absolute;
+    width: 90%;
+    border-radius: 2px;
+    text-transform: uppercase;
+    content: 'Ver Com Mais Detalhe';
+    background-color: var(--vermalha-escura);
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+}
+.compras-cad .detalhe span{
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+}
+.compras-cad .detalhe ul li {
+    list-style: none;
+    font-size: 10pt;
+    margin: 15px 0;
+    padding: 2px 0;
+}
+.compras-cad .detalhe ul li:not( :last-child ){
+    border-bottom: 1px dotted var(--vermelhaBotao);
+}
+.compras-cad .detalhe ul li:last-child{
+    text-align: end;
+    font-style: italic;
+}
+/*Ajuda esterização*/
+.ajuda  .content .container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0em;
+}
+.ajuda .content input ,.ajuda textarea{
+    border-radius: 2px;
+    padding: 7px ;
+    background-color: var(--branca);
+}
+.ajuda .content label{
+    margin:30px 0  10px 0;
+}
+.ajuda button{
+    width: 12em;
+}
+
+section .botao-movel{
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 3em;
+    width: 11em;
+    animation: botao-movel 4s infinite;
+}
+@keyframes botao-movel {
+    0%,100%{ bottom: 3em;}
+    25%,75%,90%{ bottom: 6em;}
+    50%,70%,80%{ bottom: 4em;}
+}
+/*Os keys frames*/
+@keyframes vai-lugar {
+    0%{
+        left: 0%;
+    }
+    100%{
+        left: -100%;
+    }
+}
+@keyframes vem-lugar {
+    0%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+@keyframes vai1-lugar {
+    0%{
+        left: 0%;
+    }
+    100%{
+        left: 100%;
+    }
+}
+@keyframes vem1-lugar {
+    0%{
+        left: -100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+@keyframes vem-comprar {
+    from {left: 180%;}
+    to { left: 50%;}
+}
+@keyframes vai-comprar {
+    from {left: 50%;}
+    to { left: -100%;}
+}
+@keyframes vem1-comprar {
+    from {left: -100%;}
+    to { left: 50%;}
+}
+@keyframes vai1-comprar {
+    from {left: 50%;}
+    to { left: 180%;}
+}
+
+/*Media Query */
+@media (min-width:450px) and (max-width:700px){
+    header .fa-bars ,header .menu-nav button{
+        display: block;
+    }
+    header .menu-nav button{
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        background-color: transparent;
+        color: var(--vermelha);
+    }
+    header .menu-nav{
+        position: absolute;
+        z-index: 1;
+        top: 60px;
+        left:0;
+        width: 100%;
+        height: 90vh;
+        display: none;
+        flex-direction: column;
+        background-color: rgb(41, 40, 40);
+        border-top: 2px solid var(--vermelha);
+    }
+    header .menu-nav ul.ul{
+        width: 100%;
+        height: 40%;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    header .menu-nav ul.ul li{
+        width: 100%;
+        margin: 10px 0;
+        padding: 0;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+    header .menu-nav .ul a{
+        color: var(--branca);
+        width: 100%;
+        padding: 8px 20px;
+    }
+    header  .menu-nav ul  li .link{
+        background-color: transparent ;
+    }
+    header .menu-nav .user{
+        width: 100%;
+        height: 45%;
+        top: 34vh;
+        border-radius: 0;
+        background-color: transparent;
+        display: block;
+    }
+    .user span.sair {
+        display: none
+    };
+    header nav .user ul {
+        flex-direction: column;
+    }
+
+    nav .user ul li a, nav .user ul li {
+        justify-content: left;
+        color: var(--branca);
+    }
+    nav .user ul li{
+        padding: 4px 20px;
+    }
+    header .menu-nav .imagem-div{
+        margin-top: 12em;
+        padding-left: 42%;
+    }
+    header .menu-nav .imagem-div img{
+        width: 5em;
+        height: 5em;
+        cursor: pointer;
+        border: 1px solid var(--branca);
+    }
+    header .conteudo h2 , header .conteudo p{
+        font-size:140%;
+    }
+    section{
+        height: auto;
+    }
+    section .menu-section ul li{
+        font-size: 10pt;
+    }
+
+    /*Comprar bilhete*/
+    .comprar-bilhete .content {
+        width: 100%;
+    }
+    .comprar-bilhete .content::after {
+        width: 100%;
+        left: 50%;
+    }
+    .comprar-bilhete .content .tela-etapas::after {
+        font-size: 16pt;
+    }
+    .comprar-bilhete .tela-etapas {
+        margin: auto;
+        width: 95%;
+    }
+    .comprar-bilhete .content .tela-etapas .etapas{
+        width: 100%;
+        padding: 0 5px;
+    }
+
+    /*Hospedagem e lugares turisticos */
+    .lugares-turistico .content .lugares {
+        margin: 0em;
+    }
+    .hospedagem .content,
+    .lugares-turistico .lugares {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 5em;
+    }
+    .hospedagem .content .hotel,
+    .lugares-turistico .content .menu{
+        width: 100%;
+        height: auto;
+        border-radius: 0px;
+        padding: 0;
+        margin: 0;
+    }
+    .hospedagem .content .hotel h3,
+    .lugares-turistico .content .lugares h3{
+        margin: 0 0;
+    }
+    .hospedagem .content .hotel ul,
+    .lugares-turistico .content .lugares ul{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .hospedagem .content .pesquisa span,
+    .hospedagem .content .pesquisa input ,
+    .hospedagem .content .pesquisa i,
+    .lugares-turistico .content .pesquisa span,
+    .lugares-turistico .content .pesquisa input ,
+    .lugares-turistico .content .pesquisa i{
+        display: none;
+    }
+    .hospedagem .content .hotel-principal,
+    .lugares-turistico .content .lugares-principal{
+        width: 100%;
+        border-radius: 0px;
+    }
+    .content .hotel-principal .hotel-imagem,
+    .content .lugares-principal .lugares-imagem{
+        width: 100%;
+        height: 23em;
+    }
+
+    .hospedagem .hotel .pesquisa,
+    .lugares-turistico .lugares .pesquisa {
+        width: 90%;
+    }
+    .comprar-bilhete .tela-etapas .etapas input
+    ,.comprar-bilhete .tela-etapas .etapas label{
+        font-size: 10pt;
+    }
+    .hospedagem .descricao-hospedagem,
+    .lugares-turistico .descricao-lugares{
+        justify-content: space-around;
+    }
+
+    .hospedagem .descricao-hospedagem p,
+    .lugares-turistico .descricao-lugares p{
+        margin: 10px 0;
+    } 
+
+    /*Companinhas*/
+    section .companinhas {
+        padding-top: 5.5em;
+    }
+    section .companinhas .container{
+        flex-direction: column;
+    }
+    section .companinhas .container table td{
+        font-size: 09pt;
+    }
+    section .companinhas .container .tipos,
+    section .companinhas .container .horario{
+        width: 98%;
+        margin: auto;
+    }
+    section .companinhas .container .tipos {
+        padding: 1em 0 0 1em;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    section .companinhas .container .tipos ul{
+        display: flex;
+        font-size: 09pt;
+    }
+    .companinhas .container .horario {
+        padding: 2em 20px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    /*Notificações*/
+    .notificacao .content {
+        padding: 5em 20px 1em 20px;
+    }
+    .compras-cad .detalhe{
+        padding: 3em 3px 1em 3px;
+    }
+    .compras-cad .content {
+        position: relative;
+        width: 99%;
+        padding: 5em 5px 1em 5px;
+    }
+    .compras-cad .content table td{
+        font-size: 10pt;
+    }
+    footer .parte-1 ul li a{
+        font-size: 10pt;
+    }
+    footer .parte-2 p{
+        text-align: center;
+    }
+}
+
+@media (min-width:701px) and (max-width:1200px){
+    header .fa-bars{
+        display: block;
+    }
+    header .menu-nav{
+        position: absolute;
+        z-index: 1;
+        top: 64px;
+        left:50%;
+        width: 60%;
+        height: 90vh;
+        display: none;
+        flex-direction: column;
+        background-color: rgb(41, 40, 40);
+    }
+    header .menu-nav .ul a{
+        color: var(--branca);
+    }
+    header .menu-nav ul.ul{
+        flex-direction: column;
+        height: 40%;
+        padding-top: 20px;
+    }
+    
+    header .menu-nav ul.ul li{
+        width: 100%;
+        margin: 10px 0;
+        padding: 0;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        color: var(--branca);
+    }
+    header .menu-nav .ul a{
+        color: var(--branca);
+        width: 100%;
+        padding: 8px 20px;
+    }
+    
+    header .menu-nav .user{
+        height: 40%;
+        width: 100%;
+        top: 35vh;
+        border-radius: 0;
+        background-color: transparent;
+    }
+    nav .user ul li a, nav .user ul li {
+        justify-content: left;
+        color: var(--branca);
+    }
+    nav .user ul li{
+        padding: 4px 20px;
+    } 
+    header nav .user ul{
+        flex-direction: column;
+    }
+    header .menu-nav .imagem-div{
+        margin-top: 12em;
+        padding-left: 37%;
+        color: var(--branca);
+    }
+
+    header .menu-nav .imagem-div img{
+        width: 5em;
+        height: 5em;
+        box-shadow: 0 0 20px var(--vermelhaBotao);
+        cursor: pointer;
+    }
+    header .menu-nav .imagem-div label{
+        left: 20%;
+    }
+
+    .principal .conteudo-principal{
+        width: 98%;
+        top: 25%;
+        left: 2%;
+    }
+
+    /*Companinhas*/
+    section{
+        height: auto;
+    }
+
+    /*Comprar bilhete*/
+    .comprar-bilhete .content{
+        width: 85%;
+         margin:auto;
+    }
+    .comprar-bilhete .tela-etapas {
+        margin: auto;
+        width: 100%;
+    }
+    .comprar-bilhete .content .tela-etapas::after {
+        font-size: 18pt;
+    }
+
+    /*companinhas */
+    section .companinhas {
+        padding-top: 5.5em;
+    }
+    section .companinhas .container{
+        flex-direction: column;
+    }
+    section .companinhas .container table td{
+        font-size: 09pt;
+    }
+    section .companinhas .container .tipos,
+    section .companinhas .container .horario{
+        width: 98%;
+        margin: auto;
+    }
+    section .companinhas .container .tipos ul{
+        display: flex;
+        font-size: 09pt;
+    }
+    section .companinhas .container .tipos {
+        padding: 1em 0 0 1em;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .companinhas .container .horario {
+        padding: 2em 20px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    /*Hospedagem e luagres turisticos*/
+    .hospedagem .hotel ul li ,
+     .lugares-turistico .lugares ul li{
+        font-size: 10pt;
+        margin-top: 3px;
+    }
+    .hospedagem .hotel h3 , 
+    .lugares-turistico .lugares h3{
+        font-size: 10pt;
+    }
+    .hospedagem .hotel input ,
+    .hospedagem .hotel i,
+    .lugares-turistico .lugares input,
+    .lugares-turistico .lugares i{
+        display: none;
+    }
+
+    .hospedagem .descricao-hospedagem,
+    .lugares-turistico .descricao-lugares{
+        justify-content: space-around;
+    }
+
+    .hospedagem .descricao-hospedagem p,
+    .lugares-turistico .descricao-lugares p{
+        margin: 10px 0;
+    } 
+
+    .hospedagem .content .hotel, 
+    .hospedagem .content .hotel-principal, 
+    .lugares-turistico .content .menu, 
+    .lugares-turistico .content .lugares-principal {
+        height: auto;
+    }
+    footer .parte-1 ul li a{
+        font-size: 11pt;
+    }
+}

@@ -1,0 +1,452 @@
+:root{
+    --vermelha:rgb(229, 55, 55);
+    --preta:rgba(40, 38, 38, 1);
+    --branca:rgb(234, 228, 228);
+    --vermelhaBotao:rgba(229, 55, 55, 0.4);
+    --fundoPreto:rgba(0, 0, 0, 0.816);
+    --fundoHorario:rgba(0, 0, 0, 0.581);
+    --vermelho-horario:rgba(229, 55, 55, 0.2);
+    --fundoHospedagem:rgba(0, 0, 0, 0.9);
+}
+button{
+    cursor: pointer;
+}
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    outline: 0;
+    border: none;
+    font-family: sans-serif;
+}
+header nav ul{
+    list-style: none;
+    width: 12em;
+}
+header nav li a{
+    border: 1px solid var(--vermelha);
+}
+section article.section-1{
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    animation: trocarImagens 40s alternate infinite ;
+}
+
+section .conteudo,.cont-sign-in{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+}
+section .conteudo{
+    width: 38rem;
+    color: var(--branca);
+    text-align: center;
+}
+
+section .conteudo h1{
+    color: var(--vermelha);
+    font-size:4rem ;
+    margin-bottom: 15px;
+}
+
+section .conteudo p{
+    font-size: 11pt;
+    line-height: 1.7em;
+    margin-bottom: 20px;
+}
+
+
+section .conteudo button{
+    width:40%;
+    padding:15px 10px;
+}
+
+.cont-sign-in , .sign{
+    position: absolute;
+    width: 23rem;
+    height: 22em;
+    border-radius: 5px;
+    background-color: var(--preta);
+    left: 130%;
+    padding:3.5em 10px 2.5em 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--branca);
+}
+.cont-sign-in .botao,.sign .botao{
+    color: var(--branca);
+}
+.cont-sign-in .recuperar{
+    display: block;
+    height: 3em;
+    width: 90%;
+    margin-top: 10px;
+
+}
+.cont-sign-in .recuperar p{
+    display: block;
+    font-size: 10pt;
+    margin-top: 10px;
+    
+}
+
+.cont-sign-in .recuperar a{
+    text-decoration: none;
+    color: var(--vermelha);
+}
+.cont-sign-in .recuperar a:hover{
+    text-decoration: underline;
+}
+
+.cont-sign-in::after,.sign::after{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: "Sign in";
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+    width: 94%;
+    height: 3em;
+    background-color: var(--vermelha);
+    color: var(--branca);
+    border-radius: 5px;
+}
+.caixa-input{
+    position: relative;
+    width: 95%;
+    margin: auto;
+}
+.caixa-input .texto{
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    font-size: 10pt;
+}
+.caixa-input input{
+    width: 100%;
+    margin: auto;
+    padding: 5px 0;
+    background-color: transparent;
+    border-bottom: 1px solid var(--vermelha);
+    color: var(--branca);
+}
+
+.cont-sign-in a.botao,.container-2 button{
+    display: block;
+    margin-top: 40px;
+    width: 95%;
+    padding: 15px 0;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+/*sign up*/
+.container-2{
+    display: none;
+    padding-top: 12.5em;
+    width: 100%;
+    height: 80vh;
+}
+
+.container-2 .up-1{
+    left: 50%;
+}
+
+.container-2 .sign{
+    width: 23em;
+    transform: translateX(-50%);
+}
+.sign::after{
+    content: "SIGN UP";
+}
+.container-2 article{
+    display: flex;
+}
+.container-2 article label{
+    margin-right: -30px;
+    cursor: pointer;
+}
+.content-bt{
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+}
+.content-bt button{
+    width: 45%;
+}
+
+.section-2{
+    position: relative;
+    padding: 5% 0% 5% 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.8);
+    border-top: 2px solid var(--vermelha);
+}
+
+.section-2 .content{
+    position: relative;
+    width: 90%;
+    height: 20rem;
+    padding:auto 10px 20px 10px;
+    border-radius: 2px;
+    margin: 2em 3rem;
+    background-color: var(--preta);
+    color: var(--branca);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.section-2 .content p{
+    position: relative;
+    width: 27em;
+    padding-top: 7em;
+    line-height: 1.8em;
+    text-align: center;
+    font-size: 11pt;
+}
+.section-2 .content p::after{
+    position: absolute;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    top: 0px;
+    left: 0;
+    color: var(--branca);
+    border-radius: 2px;
+    font-size: 14pt;
+    border-bottom: 2px solid var(--vermelha);
+}
+.section-2 .cont-1 p::after{
+    content: "Quem Somos Nós ?";
+}
+.section-2 .cont-2 p::after{
+    content: "O que fazemos ?";
+}
+.section-2 .cont-3 p::after{
+    content: "Onde estamos localizados ?";
+}
+.section-2 .cont-4 p::after{
+    content: "Com quem trabalhamos ?";
+}
+.section-2 .cont-5 p::after{
+    content: "Companinhas";
+}
+.section-2 .cont-6 p::after{
+    content: "Hospedagem";
+}
+.section-2 .cont-7 p::after{
+    content: "Lugares Turístico";
+}
+
+.section-2 .content .img i{
+    font-size: 850%;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 50%;
+    color: var(--vermelhaBotao);
+}
+.section-2 .content .img img{
+    width: 12rem;
+}
+
+section .botao-movel{
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 3em;
+    width: 11em;
+    animation: botao-movel 4s infinite;
+}
+
+@keyframes botao-movel {
+    0%,100%{ bottom: 3em;}
+    25%,75%,90%{ bottom: 6em;}
+    50%,70%,80%{ bottom: 4em;}
+}
+
+/**OS keys frames*/
+@keyframes  trocarImagens{
+    0%{
+        background:linear-gradient(to left,rgba(0, 0, 0, 0.8992546),rgba(0, 0, 0, 0.89955)) ,url(../assets/imagens/angola3.png) ;
+        background-position: center;
+        background-size: cover;
+    }
+    10%{
+        background:linear-gradient(to left,rgba(0, 0, 0, 0.8992546),rgba(0, 0, 0, 0.89955)) ,url(../assets/imagens/seralba.jpg) ;
+        background-position: center;
+        background-size: cover;
+    }
+    20%{
+        background:linear-gradient(to left,rgba(0, 0, 0, 0.8992546),rgba(0, 0, 0, 0.89955)) ,url(../assets/imagens/angola2.jpg) ;
+        background-position: center;
+        background-size: cover;
+    }
+    30%{
+        background:linear-gradient(to left,rgba(0, 0, 0, 0.8992546),rgba(0, 0, 0, 0.89955)) ,url(../assets/imagens/baia.jpg) ;
+        background-position: center;
+        background-size: cover;
+    }
+    40%{
+        background:linear-gradient(to left,rgba(0, 0, 0, 0.8992546),rgba(0, 0, 0, 0.89955)) ,url(../assets/imagens/cafe.jpg) ;
+        background-position: center;
+        background-size: cover;
+    }
+    50%{
+        background:linear-gradient(to left,rgba(0, 0, 0, 0.8992546),rgba(0, 0, 0, 0.89955)) ,url(../assets/imagens/mata.jpg) ;
+        background-position: center;
+        background-size: cover;
+    }
+    60%{
+        background:linear-gradient(to left,rgba(0, 0, 0, 0.8992546),rgba(0, 0, 0, 0.89955)) ,url(../imagens/bandeira.jpg) ;
+        background-position: center;
+        background-size: cover;
+    }
+    70%{
+        background:linear-gradient(to left,rgba(0, 0, 0, 0.8992546),rgba(0, 0, 0, 0.89955)) ,url(../imagens/angola2.jpg) ;
+        background-position: center;
+        background-size: cover;
+    }
+    80%{
+        background:linear-gradient(to left,rgba(0, 0, 0, 0.8992546),rgba(0, 0, 0, 0.89955)) ,url(../imagens/rocha.jpg) ;
+        background-position: center;
+        background-size: cover;
+    }
+    90%{
+        background:linear-gradient(to left,rgba(0, 0, 0, 0.8992546),rgba(0, 0, 0, 0.89955)) ,url(../imagens/montanha.jpg) ;
+        background-position: center;
+        background-size: cover;
+    }
+    100%{
+        background:linear-gradient(to left,rgba(0, 0, 0, 0.8992546),rgba(0, 0, 0, 0.89955)) ,url(../imagens/imbondeiro.jpg) ;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+@keyframes subir {
+    from{
+        bottom: 2px;
+    }
+    to{
+        top: -10px;
+        font-size: 11px;
+    }
+}
+
+@keyframes vem-content{
+    0%{
+        left:100%;
+        opacity: .1;
+    }
+    100%{
+        opacity: 1;
+        left: 50%;
+    }
+}
+
+@keyframes voltar-content {
+    from{
+        left: -50%;
+        opacity: .1;
+    }
+    to{
+        left: 50%;
+        opacity: 1;
+    }
+}
+
+@keyframes vai-content{
+    0%{
+        left:50%;
+        opacity: .1;
+    }
+    100%{
+        opacity: 0;
+        left: -50%;
+    }
+}
+
+/*media query*/
+@media ((min-width:450px) and (max-width:800px)) {
+    section .conteudo button{
+        width: 60%;
+    }
+    header nav ul{
+        width: 30%;
+    }
+    section .conteudo {
+        width: 70%;
+    }
+    section .conteudo h1 {
+        font-size: 2.5rem;
+    }
+    section .conteudo p {
+        font-size: 10pt;
+    }
+    header nav li a {
+        font-size: 0.7rem;
+    }
+    .section-2 .content {
+        height: auto;
+        padding: 30px 20px;
+    }
+    .cont-sign-in, .container-2 .sign {
+        width: 19rem;
+        height: 20em;
+        left: 140%;
+    }
+    .cont-sign-in input , .container-2 .sign  input {
+        font-size: 11pt;
+    }
+    .cont-sign-in::after, .sign::after {
+        font-size: 16pt;
+    }
+     .botao {
+        font-size: 11pt;
+    }
+
+    .container-2 .up-1{
+        left: 50%;
+    }
+    #file{
+        font-size: 9pt;
+    }
+    footer p{
+        text-align: center;
+    }
+}
+@media (min-width:801px) and (max-width:1200px) {
+    section .conteudo {
+        width: 60%;
+    }
+    section .conteudo h1 {
+        font-size: 2.5rem;
+    }
+    section .conteudo p {
+        font-size: 10pt;
+    }
+    header nav ul{
+        width: 23%;
+    }
+    header nav li a {
+        font-size: 0.7rem;
+    }
+    .cont-sign-in, .sign {
+        left: 140%;
+    }
+}

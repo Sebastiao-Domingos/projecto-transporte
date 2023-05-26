@@ -1,0 +1,128 @@
+body .content-modal {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+body .modal,.loading .load-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(212, 208, 208);
+}
+body .modal{
+    width: 20em ;
+    height: 12em;
+    border-radius: 3px;
+    background-color: rgb(41, 41, 41);
+    box-shadow: 0px 0px 30px 3px black;
+    flex-direction: column;
+}
+body .modal p{
+    text-align: center;
+}
+
+/* Esterização de loading*/
+.loading .load {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: green;
+    margin: 10px;
+}
+
+.loading .load-1{
+    animation: aumentar1 2s infinite ease-in-out ;
+}
+.loading .load-2{
+    animation: aumentar2 2s infinite ease-in-out ;
+}
+.loading .load-3{
+    animation: aumentar3 2s infinite ease-in-out ;
+}
+
+
+/*Esterização de Pergunta*/
+.asker .asker-btn button , 
+.alert button{
+    padding:5px 12px;
+    margin: 20px;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+    font-size: 12pt;
+}
+.asker-btn .btn-posetive{
+    background-color: rgb(118, 19, 19);
+}
+.asker-btn .btn-negative,
+.alert button{
+    background-color: green;
+}
+/*ESterização de confirmação*/
+.confirme .confirme-item {
+    position: relative;
+}
+.confirme .confirme-item::after,
+.confirme .confirme-item::before{
+    position: absolute;
+    content: "";
+    height: 10px;
+    background-color: green;
+    top: 2em;
+    border-radius: 7px;
+}
+.confirme .confirme-item::before{
+    width: 2em;
+    transform: rotate(50deg);
+    left: -4em;
+    animation: confirme 4s infinite ease-in-out;
+}
+.confirme .confirme-item::after{
+    top: 1.5em ;
+    width: 6em;
+    transform: rotate(-24deg);
+    left: -3em;
+    animation: confirme1 4s infinite ease-in-out;
+}
+
+/*Estilização do alerta */
+ .alert i {
+    font-size: 35pt;
+    color: rgb(133, 13, 13);
+    animation: aumentar1 2s infinite ease-in-out;
+ }
+/*KeyFrame do alerta*/
+
+
+/*KeyFrame dos confirme*/
+@keyframes confirme {
+    0%{ opacity: 1;}
+    10%{ opacity: 0;}
+    20% { opacity: 1;}
+}
+
+@keyframes confirme1{
+    0%{ opacity: 0;}
+    20%{ opacity: 1;}
+}
+
+
+/*KekFrame do loagin*/
+@keyframes aumentar1 {
+    0%{ transform: scale(1);}
+    20% { transform: scale(1.4);}
+    40%{ transform : scale(1)}
+}
+
+@keyframes aumentar2 {
+    30%{ transform: scale(1);}
+    50% { transform: scale(1.4);}
+    70%{ transform : scale(1)}
+}
+@keyframes aumentar3 {
+    60%{ transform: scale(1);}
+    80% { transform: scale(1.4);}
+    100%{ transform : scale(1)}
+}
+
